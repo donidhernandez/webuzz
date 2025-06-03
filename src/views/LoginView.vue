@@ -1,5 +1,5 @@
 <script setup>
-import Auth from '@/layouts/Auth.vue'
+import AuthLayout from '@/layouts/AuthLayout.vue'
 import { supabase } from '@/lib/supabase.js'
 import { useRouter } from 'vue-router'
 
@@ -22,7 +22,7 @@ async function loginWithGithub(event) {
 </script>
 
 <template>
-  <Auth>
+  <AuthLayout>
     <div
       class="max-w-xl w-full flex flex-col justify-center items-start h-[250px] bg-transparent rounded-xl border shadow-gray-200 border-white shadow-xl p-8 space-y-8"
     >
@@ -38,5 +38,5 @@ async function loginWithGithub(event) {
         </button>
       </form>
     </div>
-  </Auth>
+  </AuthLayout>
 </template>

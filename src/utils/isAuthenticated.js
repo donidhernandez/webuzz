@@ -5,7 +5,7 @@ export default async function isAuthenticated() {
     const { data: { session }, error } = await supabase.auth.getSession()
 
     if (error) {
-      console.error('Auth check error:', error)
+      console.error('AuthLayout check error:', error)
       return false
     }
 

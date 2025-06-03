@@ -1,10 +1,10 @@
 <template>
-  <Layout>
-    <h1 class="text-3xl font-bold underline">
+  <MainLayout>
+    <h1 class="text-3xl text-white font-bold underline">
       Hello world!
     </h1>
-  </Layout>
+  </MainLayout>
 </template>
 <script setup lang="ts">
-import Layout from '@/layouts/Layout.vue'
+import MainLayout from '@/layouts/MainLayout.vue'
 </script>
