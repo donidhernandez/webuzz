@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '@/views/HomeView.vue'
 import isAuthenticated from '@/utils/isAuthenticated.js'
 
 const router = createRouter({
@@ -8,22 +7,27 @@ const router = createRouter({
     {
       path: '/',
       name: 'login',
-      component: () => import('../views/LoginView.vue'),
+      component: () => import('../views/LoginView.vue')
     },
     {
       path: '/home',
       name: 'home',
       component: () => import('../views/HomeView.vue'),
       meta: {
-        requiresAuth: true,
-      },
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/u/:username',
+      name: 'profile',
+      component: () => import('../views/ProfileView.vue')
     },
     {
       path: '/:pathMatch(.*)*',
       name: 'not-found',
-      component: () => import('../views/NotFoundView.vue'),
+      component: () => import('../views/NotFoundView.vue')
     }
-  ],
+  ]
 })
 
 const requiresAuthGuard = async (to, from, next) => {
