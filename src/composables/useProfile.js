@@ -1,10 +1,9 @@
 import { supabase } from '@/lib/supabase.js'
-import { ref } from 'vue'
 
 export default function useProfile(userId) {
   const { data, error } = supabase.from('profiles').select('*').eq('id', userId).single()
 
-  if(error) {
+  if (error) {
     console.error(error)
   }
 
